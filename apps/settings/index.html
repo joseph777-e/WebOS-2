@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PixelOS Settings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <section class="settings-window">
+      <header class="settings-bar">
+        <span>Settings</span>
+        <button class="close-btn" type="button" aria-label="Close Settings window">×</button>
+      </header>
+
+      <main class="settings-body">
+        <h1>Make PixelOS yours</h1>
+
+        <section class="setting-card">
+          <div class="setting-copy">
+            <h2>Theme</h2>
+            <p>Choose the desktop mood.</p>
+          </div>
+          <div class="choice-row" role="group" aria-label="Theme">
+            <button class="choice-btn" data-setting="theme" data-value="light">Light</button>
+            <button class="choice-btn" data-setting="theme" data-value="dark">Dark</button>
+          </div>
+        </section>
+
+        <section class="setting-card">
+          <div class="setting-copy">
+            <h2>Wallpaper</h2>
+            <p>Preview and pick a wallpaper.</p>
+          </div>
+          <div class="wallpaper-grid" id="wallpaper-grid" role="group" aria-label="Wallpaper">
+          </div>
+        </section>
+
+        <section class="setting-card">
+          <div class="setting-copy">
+            <h2>Accent color</h2>
+            <p>Change the highlight color.</p>
+          </div>
+          <div class="choice-row swatches" role="group" aria-label="Accent color">
+            <button class="swatch swatch-pink" data-setting="accent" data-value="pink" aria-label="Pink accent"></button>
+            <button class="swatch swatch-blue" data-setting="accent" data-value="blue" aria-label="Blue accent"></button>
+            <button class="swatch swatch-green" data-setting="accent" data-value="green" aria-label="Green accent"></button>
+            <button class="swatch swatch-lavender" data-setting="accent" data-value="lavender" aria-label="Lavender accent"></button>
+            <button class="swatch swatch-orange" data-setting="accent" data-value="orange" aria-label="Orange accent"></button>
+            <button class="swatch swatch-mint" data-setting="accent" data-value="mint" aria-label="Mint accent"></button>
+          </div>
+        </section>
+
+        <section class="setting-card setting-toggle">
+          <div class="setting-copy">
+            <h2>Reduced motion</h2>
+            <p>Make animations calmer.</p>
+          </div>
+          <label class="switch">
+            <input id="motion-toggle" type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </section>
+
+        <button class="reset-btn" id="reset-btn" type="button">Reset settings</button>
+        <p class="save-status" id="save-status" aria-live="polite">Settings save automatically.</p>
+      </main>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

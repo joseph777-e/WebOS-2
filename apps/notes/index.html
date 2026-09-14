@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PixelOS Notes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <div class="window notes-window">
+      <div class="window-bar">
+        <div class="window-title">Notes</div>
+      </div>
+
+      <div class="window-body">
+        <div class="toolbar">
+          <input id="note-title" type="text" placeholder="Untitled note" aria-label="Note title" />
+          <button id="save-btn">Save</button>
+        </div>
+
+        <textarea id="note-content" placeholder="Write your thoughts here..."></textarea>
+
+        <div class="notes-list-wrap">
+          <div class="notes-header">Recent notes</div>
+          <div id="notes-list" class="notes-list"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

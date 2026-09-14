@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PixelOS Terminal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <div class="terminal-window">
+      <div class="terminal-bar">
+        <span>pixelOS terminal</span>
+        <button class="close-btn" type="button" aria-label="Close Terminal window">×</button>
+      </div>
+
+      <div class="terminal-output" id="terminal-output" aria-live="polite">
+        <p>PixelOS Terminal [version 1.0]</p>
+        <p>Type <strong>help</strong> to see available commands.</p>
+      </div>
+
+      <form class="terminal-form" id="terminal-form">
+        <label for="terminal-input">guest@pixelOS:~$</label>
+        <input id="terminal-input" type="text" autocomplete="off" spellcheck="false" aria-label="Terminal command" />
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

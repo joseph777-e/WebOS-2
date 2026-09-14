@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PixelOS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div id="desktop">
+
+  <div id="widgets">
+
+    <div class="widget" id="calendar">
+      <h3 id="calendar-title">Calendar</h3>
+      <div id="calendar-grid"></div>
+    </div>
+
+    <div id="clock">
+      <img src="assets/widgets/clock.png" alt="Clock">
+      <div id="time"></div>
+    </div>
+
+  </div>
+
+  <div id="searchbar">
+    <input type="text" id="search-input" placeholder="Search something on the web...">
+    <button id="search-btn">🔍 Search</button>
+  </div>
+
+  <div id="app-windows" aria-live="polite"></div>
+
+</div>
+
+<div id="taskbar">
+
+  <button class="about-btn" id="about-btn">about</button>
+
+  <div id="apps">
+
+    <div class="app-icon" data-app="files" data-tooltip="Files — browse your stuff">
+      <img src="assets/icons/files.png" alt="Files">
+    </div>
+
+    <div class="app-icon" data-app="search" data-tooltip="Browser — surf the web">
+      <img src="assets/icons/brows.png" alt="Browser">
+    </div>
+
+    <div class="app-icon" data-app="notes" data-tooltip="Notes — jot things down">
+      <img src="assets/icons/notes.png" alt="Notes">
+    </div>
+
+    <div class="app-icon" data-app="music" data-tooltip="Music — play your tunes">
+      <img src="assets/icons/music.png" alt="Music">
+    </div>
+
+    <div class="app-icon" data-app="terminal" data-tooltip="Terminal — run commands">
+      <img src="assets/icons/terminal.svg" alt="Terminal">
+    </div>
+
+    <div class="app-icon" data-app="settings" data-tooltip="Settings — tweak your OS">
+      <img src="assets/icons/settings.png" alt="Settings">
+    </div>
+
+  </div>
+
+  <div id="system">
+
+    <div id="network-status" class="status-indicator">
+      <span id="network-icon">📡</span>
+      <span id="network-text">Connected</span>
+    </div>
+
+    <div id="battery-status" class="status-indicator">
+      <span id="battery-icon">🔋</span>
+      <span id="battery-text">100%</span>
+    </div>
+
+  </div>
+
+</div>
+
+<div id="about-overlay">
+  <div id="about-modal">
+
+    <button id="about-close" aria-label="Close">✕</button>
+
+    <div class="about-header">
+      <span class="about-face">(´｡• ᵕ •｡`)</span>
+      <h2>About PixelOS</h2>
+    </div>
+
+    <div class="about-section">
+      <p class="about-label">✧ made by</p>
+      <p>M.Joseph (aka BIGJO)</p>
+    </div>
+
+    <div class="about-section">
+      <p class="about-label">✧ made :</p>
+      <p>For stardance challenge in july and august </p>
+    </div>
+
+    <div class="about-section">
+      <p class="about-label">✧ about me</p>
+      <p>Am 17 years old i leave in burundi in africa. I Like to play games and read books in my free time. Am a christian and i like to pray also I also enjoy talking to my friends and familly, yeah that is all.</p>
+    </div>
+
+    <div class="about-section">
+      <p class="about-label">✧ about this project</p>
+      <p>PixelOS is a small web operating system i made with main theme being pixel cause i love pixel arts, built while learning HTML, CSS and JavaScript.</p>
+    </div>
+
+    <p class="about-footer">made with ♡ pixel by pixel</p>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

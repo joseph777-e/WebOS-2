@@ -1,0 +1,51 @@
+Current → Better Name
+Navigation/Camera:
+
+screen_x, sy → screenX, screenY
+wx, wy → worldX, worldY
+dx, dy, dist2, dist, minDist → deltaX, deltaY, distanceSquared, distance, minDistance
+fx, fy → forceX, forceY
+a, b, bb → body, otherBody, secondBody
+i, j, k, p, s, t, c → index, j, k, particleIndex, starIndex, trailIndex, cloudIndex
+ww, wh → worldWidth, worldHeight
+r, angle, speed → orbitRadius, orbitAngle, orbitSpeed
+cx, cy, tm → centerX, centerY, totalMass
+v, pct → value, percentage
+Canvas/Drawing:
+
+ctx → canvasContext
+sCtx → starContext
+ng, gg, gr, bodyGrad, corona, grad, tg → nebulaGradient, glowGradient, radialGradient, bodyGradient, coronaGradient, gradient, tailGradient
+lw → lineWidth
+ta → trailAlpha
+bv → blueValue
+ctx_tx, ctx_ty → tailDirX, tailDirY
+glowR → glowRadius
+beamLen, beamWidth → beamLength, beamWidth
+Physics:
+
+G → GRAVITATIONAL_CONSTANT (should be uppercase for constant)
+dt → deltaTime
+ts → timestamp
+softening → softeningConstant
+maxR → maxRadius
+wellStrength → GRAVITY_WELL_STRENGTH
+UI/State:
+
+el, btn, ibtn → element, button, inspectorButton
+msg, detailType, detailData → message, eventType, eventData
+gx, st, p → galaxy, star, planet
+nr, fr, ringR → numRings, fractionalRing, ringRadius
+Event/Object:
+
+nb → newBody
+nd, nDist, nDist2 → keep but clarify in context
+rr → ringRadius
+al → alpha
+flicker, pulse → keep (these are descriptive)
+odx, ody → orbitDeltaX, orbitDeltaY
+od → orbitDistance
+pa, ps → particleAngle, particleSpeed
+pa2, s2 → angle2, speed2
+col, cols → color, colors
+md, va → ... these don't exist, checking code
