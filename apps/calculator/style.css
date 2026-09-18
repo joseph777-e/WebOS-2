@@ -1,0 +1,251 @@
+:root {
+  --pink-soft: #ffd1ec;
+  --pink-mid: #ff8fb1;
+  --pink-deep: #c9377b;
+  --cream: #fff7d6;
+  --cream-deep: #fff3b0;
+  --plum-dark: #2e1f2e;
+  --plum-mid: #3d2a3d;
+  --text-brown: #5a3d12;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  overflow: hidden;
+  font-family: "Press Start 2P", monospace;
+  color: var(--text-brown);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.app-shell {
+  width: 100%;
+  min-height: 0;
+  display: grid;
+  place-items: center;
+  padding: 0;
+}
+
+.window {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(180deg, var(--cream-deep) 0%, var(--cream) 70%, #ffe8f6 100%);
+  border: 4px solid var(--plum-dark);
+  border-radius: 20px;
+  box-shadow: 10px 10px 0 var(--plum-dark);
+  overflow: hidden;
+  transform-origin: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.window-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border-bottom: 4px solid var(--plum-dark);
+}
+
+.window-title {
+  font-size: 12px;
+  color: var(--pink-deep);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.window-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.win-btn {
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  border: 3px solid var(--plum-dark);
+  background: var(--pink-mid);
+  border-radius: 4px;
+  box-shadow: 2px 2px 0 rgba(46, 31, 46, 0.5);
+  cursor: pointer;
+}
+
+.win-btn:hover {
+  background: var(--pink-deep);
+  color: var(--white);
+}
+
+/* The app is embedded as a native PixelOS widget, so the close chrome stays hidden. */
+.close-btn,
+.window-controls {
+  display: none;
+}
+
+.window-body {
+  padding: 26px 22px 30px;
+}
+
+.display-wrap {
+  background: rgba(46, 31, 46, 0.08);
+  border: 3px solid var(--plum-dark);
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  text-align: right;
+}
+
+.display-expression {
+  font-size: 9px;
+  color: var(--pink-deep);
+  min-height: 12px;
+  margin-bottom: 8px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.display-result {
+  font-size: clamp(18px, 4vw, 24px);
+  color: var(--plum-dark);
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.key {
+  border: 3px solid var(--plum-dark);
+  border-radius: 12px;
+  box-shadow: 4px 4px 0 var(--plum-dark);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  padding: 14px 0;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.key:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--plum-dark);
+}
+
+.key:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 var(--plum-dark);
+}
+
+.key-num {
+  background: var(--cream);
+  color: var(--plum-dark);
+}
+
+.key-fn {
+  background: var(--pink-soft);
+  color: var(--plum-dark);
+}
+
+.key-op {
+  background: var(--pink-mid);
+  color: var(--white);
+}
+
+.key-eq {
+  background: var(--pink-deep);
+  color: var(--white);
+}
+
+.key-zero {
+  grid-column: span 2;
+}
+
+/* Minimized widget state */
+.window.is-minimized {
+  width: 100%;
+  transform: scale(0.88);
+  box-shadow: 7px 7px 0 var(--plum-dark);
+}
+
+.window.is-minimized .window-body {
+  padding: 14px 18px;
+}
+
+.window.is-minimized .display-wrap {
+  margin-bottom: 0;
+}
+
+.window.is-minimized .keypad {
+  display: none;
+}
+
+@media (max-width: 420px) {
+  .window-body {
+    padding: 20px 18px 24px;
+  }
+
+  .keypad {
+    gap: 8px;
+  }
+
+  .key {
+    font-size: 12px;
+    padding: 12px 0;
+  }
+}
+
+/* Embedded-as-widget sizing overrides */
+.calc-window {
+  width: 100%;
+}
+
+.calc-window .window-body {
+  padding: 14px 16px 16px;
+}
+
+.calc-window .display-wrap {
+  padding: 10px 12px;
+  margin-bottom: 12px;
+}
+
+.calc-window .display-expression {
+  font-size: 7px;
+}
+
+.calc-window .display-result {
+  font-size: 17px;
+}
+
+.calc-window .keypad {
+  gap: 7px;
+}
+
+.calc-window .key {
+  font-size: 10px;
+  padding: 9px 0;
+  border-width: 2px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 0 var(--plum-dark);
+}

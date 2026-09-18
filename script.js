@@ -353,7 +353,7 @@ PixelOS.apps = (function () {
         files: "Files",
         search: "Browser",
         notes: "Notes",
-        music: "Music",
+        calculator: "Calculator",
         terminal: "Terminal",
         settings: "Settings"
     };

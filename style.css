@@ -130,9 +130,9 @@ outline-offset:2px;
 filter:drop-shadow(0 10px 24px rgba(46,31,46,0.35));
 }
 
-.os-app-window.os-app-music{
-width:min(88vw, 350px);
-height:340px;
+.os-app-window.os-app-calculator{
+width:min(88vw, 320px);
+height:min(80vh, 470px);
 }
 
 .os-app-window.os-app-terminal{
@@ -154,7 +154,7 @@ box-shadow:8px 8px 0 var(--plum-dark);
 @media (max-width:600px){
   #app-windows{inset:10px 10px 76px;}
   .os-app-window{width:96vw;height:78vh;}
-  .os-app-window.os-app-music{width:min(88vw, 330px);height:340px;}
+  .os-app-window.os-app-calculator{width:min(88vw, 300px);height:min(78vh, 450px);}
   .os-app-window.os-app-terminal{width:94vw;height:65vh;}
 }
 
