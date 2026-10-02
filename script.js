@@ -312,10 +312,17 @@ PixelOS.settings = (function () {
                 color: "#2E1F2E"
             }
         };
+        const wallpaperFileNames = {
+            wallpaper2: "wallpaper2.png",
+            wallpaper3: "wallpaper3.jpg",
+            wallpaper4: "wallpaper4.jpg",
+            wallpaper5: "wallpaper5.jpg"
+        };
 
         const [accent, deepAccent] = accentColors[settings.accent] || accentColors.pink;
+        const wallpaperName = settings.wallpaper.replace("file-", "");
         const wallpaper = wallpaperStyles[settings.wallpaper] || {
-            image: `url("assets/wallpaper/${encodeURIComponent(settings.wallpaper.replace("file-", ""))}")`,
+            image: `url("assets/wallpaper/${encodeURIComponent(wallpaperFileNames[wallpaperName] || wallpaperName)}")`,
             color: "#FFD1EC"
         };
         root.style.setProperty("--pink-mid", accent);
